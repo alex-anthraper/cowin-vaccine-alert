@@ -18,10 +18,11 @@ password = mail_creds.email_creds.password
 twilio_creds = pd.read_json('twilio_creds.json')
 account_sid = twilio_creds.twilio_creds.account_sid
 auth_token = twilio_creds.twilio_creds.auth_token
+from_whatsapp_no = twilio_creds.twilio_creds.from_whatsapp_no
+my_whatsapp_no = twilio_creds.twilio_creds.my_whatsapp_no
 client = Client(account_sid, auth_token)
 
-from_whatsapp_no = '+13215172192'
-my_whatsapp_no = '+971565483706'
+
 
 def create_session_info(center, session):
     return {"district_name":center["district_name"],
