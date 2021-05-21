@@ -15,10 +15,9 @@ mail_creds = pd.read_json('email_creds.json')
 username = mail_creds.email_creds.username
 password = mail_creds.email_creds.password
 
-# Your Account SID from twilio.com/console
-account_sid = "AC494b263560f406c0b39ccb8d623b7140"
-# Your Auth Token from twilio.com/console
-auth_token  = "cb08ebfe446b7fc21aca4ece59914ed1"
+twilio_creds = pd.read_json('twilio_creds.json')
+account_sid = twilio_creds.twilio_creds.account_sid
+auth_token = twilio_creds.twilio_creds.auth_token
 client = Client(account_sid, auth_token)
 
 from_whatsapp_no = '+13215172192'
